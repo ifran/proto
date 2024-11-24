@@ -1,0 +1,193 @@
+<html lang="pt-BR">
+
+<head>
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png" alt="Loja de Roupas" title="Loja de Roupas" width="80" height="80">
+                </a>
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right" href="./carrinho.html" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./perfil.html">
+                            <i class="bi bi-person"></i> Conta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./pedidos.html">
+                            <i class="bi bi-cart-check"></i> Pedidos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+
+            <div id="carrinhoArea">
+                <div id="carrinho_container">
+
+                    <div class="container col-10">
+                        <div class="step-indicator">
+                            <div class="step text-primary">
+                                <i class="bi bi-cart3 fs-1"></i>
+                                <p class="step-title"><strong>Pedido</strong></p>
+                            </div>
+                            <div class="step-conector "></div>
+                            <div class="step ">
+                                <i class="bi bi-truck fs-1"></i>
+                                <p class="step-title"><strong>Entrega</strong></p>
+                            </div>
+                            <div class="step-conector "></div>
+                            <div class="step ">
+                                <i class="bi bi-credit-card fs-1"></i>
+                                <p class="step-title"><strong>Pagamento</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="form_carrinho">
+                        <div class="col-lg-8 col-sm-12">
+                            <div id="container_produtos">
+                                <div class="card form_container">
+                                    <div class="carrinho_item produto_id_9180748">
+                                        <div class="produto_imagem_e_nome_container">
+                                            <div class="img_produto_table">
+                                                <img src="./assets/AC1tIecXQfp1jMS5IiGR9noxoiwlMLIhNUz5BIfX.png"
+                                                    alt="Calça Jeans" class="imagemProdutoCarrinho">
+                                            </div>
+                                        </div>
+
+                                        <div class="produto_detalhes w-100">
+                                            <div class="item_nome">
+                                                <strong>
+                                                    Calça Jeans
+                                                </strong>
+                                            </div>
+
+                                            <div class="item_controles">
+                                                <div class="preco_quantidade">
+                                                    <strong>
+                                                        R$ <span data-id="9180748" data-categoria="183013"
+                                                            class="subtotal" data-preco="20">
+                                                            20,00
+                                                        </span>
+                                                    </strong>
+                                                    <div class="item_quantidade_controles">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn-changeAmount decrementBtn"
+                                                                    type="button" data-action="decrement"
+                                                                    data-categoria="183013">
+                                                                    -
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" inputmode="decimal"
+                                                                class="form-control inputProductAmount" placeholder=""
+                                                                value="1" data-price="20" id="amount_9180748_183013"
+                                                                data-nome="Calça Jeans"
+                                                                readonly="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn-changeAmount incrementBtn"
+                                                                    type="button" data-action="increment"
+                                                                    data-categoria="183013">
+                                                                    +
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-sm-12">
+                            <div id="container_resumo">
+                                <div class="card form_container">
+                                    <div class="container">
+                                        <h5>Resumo</h5>
+                                        <ul class="list-group mt-3">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="total_de_produtos">1 x</span>
+                                                <span> produto</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="forma_entrega"></span>
+                                                <span id="forma_entrega_detalhes"></span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="forma_pagamento"></span>
+                                                <span id="forma_pagamento_detalhes"></span>
+                                            </li>
+                                            <br>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <h5>Subtotal</h5>
+                                                <span id="preview-total">R$ 20,00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100 text-center">
+                                <a href="./endereco.html" class="btn btn-primary w-100 mt-3 mb-3">Continuar</a>
+                                <a href="./index.html">Continuar comprando</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

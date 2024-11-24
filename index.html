@@ -1,0 +1,232 @@
+<html lang="pt-BR">
+
+<head>
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png" alt="Loja de Roupas"
+                    title="Loja de Roupas" width="80" height="80">
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right" href="./#" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./login.html">
+                            <i class="bi bi-door-open"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+            <div id="divProdutos" style="margin-bottom: 2rem;">
+                <section id="filter-bar" class="filters pt-0">
+                    <div class="p-2">
+                        <div class="delivery-infos"></div>
+                        <div class="d-flex justify-content-center">
+                            <div class="col-sm-11">
+                                <div class="search">
+                                    <input id="produtos_search" type="text" name="search" placeholder="Buscar produto"
+                                        autocomplete="off" value="">
+                                    <button type="button"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="filtro-categorias" class="p-2">
+                    <ul class="nav nav-pills d-flex ml-2 mr-2">
+                        <li data-ancora="" type="button"
+                            class="btn btn-primary categoria-ancora categoria-todas active">
+                            <span>TODAS</span>
+                        </li>
+                        <li data-ancora="Roupas" type="button" class="btn btn-primary categoria-ancora">
+                            <span>Roupas</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="products">
+                    <div class="pl-2 pr-2">
+                        <div class="clearfix"></div>
+                        <div id="search-loading" class="d-flex justify-content-center" style="display: none!important;">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Carregando...</span>
+                            </div>
+                        </div>
+                        <div id="search-results"></div>
+                        <div id="products-all" data-load-more="" data-next-page="2" data-loading="Carregando">
+                            <div id="categoria_lista_Roupas" class="produto_categoria_lista">
+                                <div class="produto-title section-title">
+                                    <h2 class="title-part establishment-text-color">
+                                        Roupas
+                                    </h2>
+                                </div>
+                                <div>
+                                    <div id="categoria_Roupas"
+                                        class="d-flex direction-column flex-wrap justify-content-center">
+
+                                        <div
+                                            class="session-product produto_item card col-xl-2 col-lg-4 col-md-4 col-xs-12 p-2">
+                                            <div class="product-box">
+                                                <section>
+                                                    <div class="row">
+                                                        <div class="product_image_col col-12">
+                                                            <div class="avatar">
+                                                                <img src="./assets/AC1tIecXQfp1jMS5IiGR9noxoiwlMLIhNUz5BIfX.png"
+                                                                    alt="Calça Jeans" class="product-thumb img-fluid">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                                                            <div class="title">
+                                                                <strong class="produto-nome">Calça Jeans</strong>
+                                                            </div>
+                                                            <div class="description produto_descricao">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                                <section>
+                                                    <hr class="m-1">
+                                                    <div class="text-end price">
+                                                        <span class="value">R$
+                                                            20,00</span>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn-changeAmount decrementBtn"
+                                                                    type="button" data-action="decrement"
+                                                                    data-productid="9180748" data-categoria="183013">
+                                                                    -
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" inputmode="decimal"
+                                                                style="text-align: center; background-color: #F5F5F5;"
+                                                                class="form-control inputProductAmount edited selectedItem"
+                                                                placeholder="" value="0" data-price="20.00"
+                                                                id="amount_9180748_183013" data-productid="9180748"
+                                                                data-nome="Calça Jeans" data-categoria="183013"
+                                                                readonly="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn-changeAmount incrementBtn"
+                                                                    type="button" data-action="increment"
+                                                                    data-productid="9180748" data-categoria="183013">
+                                                                    +
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="session-product produto_item card col-xl-2 col-lg-4 col-md-4 col-xs-12 p-2">
+                                            <div class="product-box">
+                                                <section>
+                                                    <div class="row">
+                                                        <div class="product_image_col col-12">
+                                                            <div class="avatar">
+                                                                <img src="./assets/7R9xevfj0LeSl6Oq9OrnliUCg4TFkeSKKggtEs0r.png"
+                                                                    alt="Camiseta Azul" class="product-thumb img-fluid">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                                                            <div class="title">
+                                                                <strong class="produto-nome">Camiseta Azul</strong>
+                                                            </div>
+                                                            <div class="description produto_descricao">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                                <section>
+                                                    <hr class="m-1">
+                                                    <div class="text-end price">
+                                                        <span class="value">R$
+                                                            10,00</span>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn-changeAmount decrementBtn"
+                                                                    type="button" data-action="decrement">
+                                                                    -
+                                                                </button>
+                                                            </div>
+                                                            <input type="text" inputmode="decimal"
+                                                                style="text-align: center; background-color: #F5F5F5;"
+                                                                class="form-control inputProductAmount edited"
+                                                                placeholder="" value="0" data-price="10.00"
+                                                                id="amount_9180747_183013" data-productid="9180747"
+                                                                data-nome="Camiseta Azul" data-categoria="183013"
+                                                                readonly="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn-changeAmount incrementBtn"
+                                                                    type="button" data-action="increment">
+                                                                    +
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="total_container">
+                <a href="./carrinho.html" class="btn btn-success" id="confirm-order">
+                    Total: <strong id="preview-total" data-amount-items="1" data-value="25">R$ 0,00</strong> -
+                    Ir para o carrinho
+                </a>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

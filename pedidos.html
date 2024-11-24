@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap-icons.css" crossorigin="anonymous">
+
+    <link href="./assets/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/toastr.css" rel="stylesheet">
+
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png" title="Loja de Roupas" width="80" height="80">
+                </a>
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./perfil.html">
+                            <i class="bi bi-person"></i> Conta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./pedidos.html">
+                            <i class="bi bi-cart-check"></i> Pedidos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+            <style>
+                .pedidosArea {
+                    border: 1px solid #CCC;
+                    margin: auto;
+                    margin-top: 1rem;
+                    background-color: #FFF;
+                    padding: 0.5rem;
+                }
+
+                .textoPedido {
+                    font-weight: bold;
+                }
+
+                .layout {
+                    background-color: #00ADF2 !important;
+                    height: 58rem;
+                    position: fixed;
+                    width: 100%;
+                    overflow-y: hidden !important;
+                }
+
+                .text-payment {
+                    font-weight: bold;
+                    font-size: 26px;
+                    margin: 5rem 0 0 0;
+                    color: white;
+                }
+
+                .detalhes {
+                    margin: 1.5rem;
+                }
+
+                .button-info {
+                    margin: 1rem;
+                }
+
+                @media screen {
+                    #printSection {
+                        display: none;
+                    }
+                }
+
+                @media print {
+                    body * {
+                        visibility: hidden;
+                    }
+
+                    #printSection,
+                    #printSection * {
+                        visibility: visible;
+                    }
+
+                    #printSection {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                .sty-btn {
+                    margin: .5rem 0 .5rem 0;
+                }
+
+                #qrCode-content p {
+                    text-align: center;
+                }
+
+                #qrCode-content h2 {
+                    text-align: center;
+                }
+
+                #qrCode-content h3 {
+                    text-align: center;
+                }
+
+                #qrCode-content li {
+                    text-align: center;
+                    list-style-type: none;
+                }
+
+                #qrCode-content img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                }
+
+                #table_subtotal {
+                    padding: 12px 0 12px 12px
+                }
+            </style>
+
+            <h3 style="margin: auto; text-align: center; margin-top: 2rem;"> Meus pedidos </h3>
+
+            <h5 style="text-align: center; margin: auto; margin-top: 1rem;">
+                <a href="./index.html"><i class="fa fa-arrow-left"></i>
+                    Voltar ao catálogo
+                </a>
+            </h5>
+
+            <div class="row" style="margin: 0 !important; padding: 1rem;">
+                <div class="pedidosArea col-sm-10 col-md-10 col-lg-8 col-xl-8 d-flex justify-content-center">
+                    <div class="row w-100">
+                        <div class="col-12">
+                            <span class="tituloPedido">
+                                Número do pedido:
+                            </span>
+                            <span class="textoPedido">
+
+                                11665566
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <span class="tituloPedido">
+                                Status:
+                            </span>
+                            <span class="textoPedido">
+                                Pagamento finalizado
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <span class="tituloPedido">
+                                Última atualização:
+                            </span>
+                            <span class="textoPedido">
+                                21/10/2024 17:21
+                            </span>
+                        </div>
+
+                        <div class="col-6" style="margin-top: 1rem;">
+                            <button class="btn btn-success mb-1"><i class="bi bi-receipt"></i> Exibir vales</button>
+                            <a class="btn btn-success mb-1"><i class="bi bi-file-earmark-pdf-fill"></i> Baixar vales</a>
+                            <button class="btn btn-success mb-1" class="bi bi-share-fill"></i> Compartilhar vales</button>
+                        </div>
+
+                        <div class="col-6 d-flex justify-content-end" style="margin-top: 1rem;">
+                            <span class="tituloPedido">
+                                Valor total:
+                            </span>
+                            <span class="textoPedido">
+                                R$ 0,22
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="printThis">
+                <div id="MyModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="body-message">
+                                    <div id="qrCode-content">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true"
+                                    id="closeModal">Fechar</button>
+                                <button id="btnPrint" type="button" class="btn btn-default">Imprimir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

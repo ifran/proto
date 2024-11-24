@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
+    <link href="./assets/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/toastr.css" rel="stylesheet">
+
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png"
+                        alt="Loja de Roupas" title="Loja de Roupas" width="80" height="80">
+                </a>
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./perfil.html">
+                            <i class="bi bi-person"></i> Conta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./pedidos.html">
+                            <i class="bi bi-cart-check"></i> Pedidos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+
+            <div id="carrinhoArea">
+                <div id="carrinho_container">
+
+                    <div class="container col-10">
+                        <div class="step-indicator">
+                            <div class="step text-primary">
+                                <i class="bi bi-cart3 fs-1"></i>
+                                <p class="step-title"><strong>Pedido</strong></p>
+                            </div>
+                            <div class="step-conector bg-primary"></div>
+                            <div class="step text-primary">
+                                <i class="bi bi-truck fs-1"></i>
+                                <p class="step-title"><strong>Entrega</strong></p>
+                            </div>
+                            <div class="step-conector "></div>
+                            <div class="step ">
+                                <i class="bi bi-credit-card fs-1"></i>
+                                <p class="step-title"><strong>Pagamento</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="form_carrinho">
+
+                        <div class="d-flex justify-content-center w-100">
+                            <h5>Forma de Entrega</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-center w-100">
+                            <ul class="nav nav-pills justify-content-center gap-2" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_tipo_retirada shadow-sm nav-link active" data-bs-toggle="pill"
+                                        id="pill_retirada_entrega" data-bs-target="#retirada_entrega_container"
+                                        type="button" role="tab" aria-controls="retirada_entrega_container"
+                                        aria-selected="true" autocomplete="off">
+                                        <i class="bi bi-truck"></i><br>Entrega
+                                        <input type="radio" class="tipo_retirada" name="tipo_retirada" value="entrega">
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_tipo_retirada shadow-sm nav-link " data-bs-toggle="pill"
+                                        id="pill_retirada_entrega" data-bs-target="#retirada_consumo_local_container"
+                                        type="button" role="tab" aria-controls="retirada_consumo_local_container"
+                                        aria-selected="false" autocomplete="off" tabindex="-1">
+                                        <i class="bi bi-shop"></i><br>Consumo Local
+                                        <input type="radio" class="tipo_retirada" name="tipo_retirada"
+                                            value="consumo_local">
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_tipo_retirada shadow-sm nav-link " data-bs-toggle="pill"
+                                        id="pill_retirada_entrega" data-bs-target="#retirada_retirada_local_container"
+                                        type="button" role="tab" aria-controls="retirada_retirada_local_container"
+                                        aria-selected="false" autocomplete="off" tabindex="-1">
+                                        <i class="bi bi-shop-window"></i><br>Retirar no local
+                                        <input type="radio" class="tipo_retirada" name="tipo_retirada"
+                                            value="retirada_local">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div id="retirada_entrega_container" role="tabpanel" class="tab-pane fade active show"
+                                    aria-labelledby="pill_retirada_entrega">
+                                    <div class="card form_container">
+                                        <div class="form_content">
+                                            <legend>Informações de Endereço</legend>
+                                            <div class="row">
+                                                <label for="delivery_cep">CEP:</label>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" id="delivery_cep" class="form-control"
+                                                            name="delivery_cep" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pt-1">
+                                                    <div class="form-group">
+                                                        <a id="link_consulta_cep" class="btn btn-sm btn-secondary"
+                                                            target="_blank">Não sei meu CEP</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <label for="delivery_logradouro">Rua:</label>
+                                                        <input type="text" id="delivery_logradouro" class="form-control"
+                                                            name="delivery_logradouro" value=""
+                                                            required="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="delivery_numero">Número:</label>
+                                                        <input type="text" id="delivery_numero" class="form-control"
+                                                            name="delivery_numero" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <label for="delivery_complemento">Complemento:</label>
+                                                        <input type="text" id="delivery_complemento"
+                                                            class="form-control" name="delivery_complemento" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="delivery_bairro">Bairro:</label>
+                                                        <input type="text" id="delivery_bairro" class="form-control"
+                                                            name="delivery_bairro" required="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="delivery_cidade">Cidade:</label>
+                                                        <input type="text" id="delivery_cidade" class="form-control"
+                                                            name="delivery_cidade" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="delivery_uf">Estado:</label>
+                                                        <select id="delivery_uf" name="delivery_uf" type="text"
+                                                            class="form-control" required="">
+                                                            <option value="RS" selected="">RS
+                                                            </option>
+                                                            <option value="AC">AC</option>
+                                                            <option value="AL">AL</option>
+                                                            <option value="AP">AP</option>
+                                                            <option value="AM">AM</option>
+                                                            <option value="BA">BA</option>
+                                                            <option value="CE">CE</option>
+                                                            <option value="DF">DF</option>
+                                                            <option value="ES">ES</option>
+                                                            <option value="GO">GO</option>
+                                                            <option value="MA">MA</option>
+                                                            <option value="MT">MT</option>
+                                                            <option value="MS">MS</option>
+                                                            <option value="MG">MG</option>
+                                                            <option value="PA">PA</option>
+                                                            <option value="PB">PB</option>
+                                                            <option value="PR">PR</option>
+                                                            <option value="PE">PE</option>
+                                                            <option value="PI">PI</option>
+                                                            <option value="RJ">RJ</option>
+                                                            <option value="RN">RN</option>
+                                                            <option value="RS">RS</option>
+                                                            <option value="RO">RO</option>
+                                                            <option value="RR">RR</option>
+                                                            <option value="SC">SC</option>
+                                                            <option value="SP">SP</option>
+                                                            <option value="SE">SE</option>
+                                                            <option value="TO">TO</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="retirada_consumo_local_container" role="tabpanel" class="tab-pane fade "
+                                    aria-labelledby="pill_retirada_entrega">
+                                    <div class="card form_container">
+                                        <h5>Consumo no local</h5>
+
+                                        <div class="form_content">
+                                            <div id="form-onsite" class="p-2">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="numero_mesa">Número da mesa:</label>
+                                                            <input type="text" id="numero_mesa" class="form-control"
+                                                                name="numero_mesa" value="" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="retirada_retirada_local_container" role="tabpanel" class="tab-pane fade "
+                                    aria-labelledby="pill_retirada_entrega">
+                                    <div class="card form_container">
+                                        <h5>Retirar no local</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-12">
+                            <div id="container_resumo">
+                                <div class="card form_container">
+                                    <div class="container">
+                                        <h5>Resumo</h5>
+                                        <ul class="list-group mt-3">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="total_de_produtos">1 x</span>
+                                                <span> produto</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="forma_entrega"></span>
+                                                <span id="forma_entrega_detalhes"></span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="forma_pagamento"></span>
+                                                <span id="forma_pagamento_detalhes"></span>
+                                            </li>
+                                            <br>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <h5>Subtotal</h5>
+                                                <span id="preview-total">R$ 20,00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100 text-center">
+                                <a href="forma_pag.html"
+                                    class="btn btn-primary w-100 mt-3 mb-3">Continuar</a>
+                                <a href="./carrinho.html">Voltar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

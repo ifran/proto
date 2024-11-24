@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap-icons.css" crossorigin="anonymous">
+
+    <link href="./assets/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/toastr.css" rel="stylesheet">
+
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png" title="Loja de Roupas" width="80"
+                        height="80">
+                </a>
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./perfil.html">
+                            <i class="bi bi-person"></i> Conta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./pedidos.html">
+                            <i class="bi bi-cart-check"></i> Pedidos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+
+            <style>
+                .loginArea,
+                .cadastroArea {
+                    background-color: #FFF;
+                }
+
+                .formRow {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                .dateSelect {
+                    margin: 0.5rem;
+                }
+            </style>
+
+
+            <div class="row" style="margin: 0 !important;padding: 1rem;">
+                <div class="cadastroArea col-sm-10 col-md-10 col-lg-8 col-xl-8"
+                    style="border: 1px solid #CCC; margin: auto;margin-top: 4rem;">
+
+                    <div class="row formRow">
+                        <div class="col-sm-12 d-flex justify-content-center" style="margin-top: 1rem;">
+                            <h5 style="text-align: center;"><a href="./index.html"><i class="fa fa-arrow-left"></i>
+                                Voltar ao Catálogo</a></h5>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align: center; margin: auto;margin-top: 1rem; margin-bottom: 1rem;">Seus dados</h3>
+
+                    <form id="alterar_dados_form" method="post" style="margin: 0; padding:0;width: 100%;">
+                        <div class="row d-flex justify-content-center formRow">
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="email_cadastro">* Email</label>
+                                <input type="text" class="form-control" name="email_cadastro" id="email_cadastro"
+                                    value="">
+                            </div>
+
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="nome">* Nome Completo</label>
+                                <input type="text" class="form-control" name="nome" id="nome" value="">
+                            </div>
+
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="sexo">* Sexo</label>
+                                <select class="form-control" id="sexo" name="sexo">
+                                    <option value="F">Feminino</option>
+                                    <option value="M">Masculino</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="cpf">* CPF</label>
+                                <input type="text" class="form-control" name="cpf" id="cpf" value="">
+                            </div>
+
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="telefone">* Telefone</label>
+                                <input type="text" class="form-control" name="telefone" id="telefone">
+                            </div>
+
+                            <div class="col-sm-10 col-md-10 col-lg-6 col-xl-6 form-group">
+                                <label for="data_nascimento">* Data de Nascimento</label>
+                                <input type="text" class="form-control" name="data_nascimento" id="data_nascimento">
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-success mt-3" style="width: 100%;"
+                                    id="salvar_cadastro">Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

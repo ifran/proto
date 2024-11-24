@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap-icons.css" crossorigin="anonymous">
+
+    <link href="./assets/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/toastr.css" rel="stylesheet">
+
+    <link href="./assets/global.css" rel="stylesheet">
+    <link href="./assets/layout.css" rel="stylesheet">
+
+    <title>Loja de Roupas</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav id="app-header" class="navbar navbar-expand-lg justify-content-start p-2">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/Oj0ZxG2jZG5OdKfqd9zhfNI6Re8jhSwaR5WRMSpy.png" title="Loja de Roupas" width="80" height="80">
+                </a>
+            </div>
+            <div id="title_container">
+                <h5 class="establishment-text-top-color">Loja de Roupas</h5>
+            </div>
+            <a class="navbar-toggler text-light fixed-right" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-house"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./perfil.html">
+                            <i class="bi bi-person"></i> Conta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./pedidos.html">
+                            <i class="bi bi-cart-check"></i> Pedidos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./carrinho.html">
+                            <i class="bi bi-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="./index.html">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app-content">
+            <div id="carrinhoArea">
+                <div id="pagamento_container">
+                    <div class="container col-10">
+                        <div class="step-indicator">
+                            <div class="step text-primary">
+                                <i class="bi bi-cart3 fs-1"></i>
+                                <p class="step-title"><strong>Pedido</strong></p>
+                            </div>
+                            <div class="step-conector bg-primary"></div>
+                            <div class="step text-primary">
+                                <i class="bi bi-truck fs-1"></i>
+                                <p class="step-title"><strong>Entrega</strong></p>
+                            </div>
+                            <div class="step-conector bg-primary"></div>
+                            <div class="step text-primary">
+                                <i class="bi bi-credit-card fs-1"></i>
+                                <p class="step-title"><strong>Pagamento</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="form_pagamento">
+                        <div class="d-flex justify-content-center w-100">
+                            <h5>Forma de Pagamento</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-center w-100">
+                            <ul class="nav nav-pills justify-content-center gap-2" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_pagamento_tipo shadow-sm nav-link active" data-bs-toggle="pill"
+                                        id="pill_pagamento_credito" data-bs-target="#pagamento_credito_container"
+                                        type="button" role="tab" aria-controls="pagamento_credito_container"
+                                        aria-selected="true" autocomplete="off">
+                                        <i class="bi bi-credit-card"></i><br>Crédito
+                                        <input type="radio" class="pagamento_tipo" name="pagamento_tipo"
+                                            value="cartao_credito">
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_pagamento_tipo shadow-sm nav-link " data-bs-toggle="pill"
+                                        id="pill_pagamento_debito" data-bs-target="#pagamento_debito_container"
+                                        type="button" role="tab" aria-controls="pagamento_debito_container"
+                                        aria-selected="false" autocomplete="off" tabindex="-1">
+                                        <i class="bi bi-credit-card-2-back-fill"></i><br>Débito
+                                        <input type="radio" class="pagamento_tipo" name="pagamento_tipo"
+                                            value="cartao_debito">
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="tab_pagamento_tipo shadow-sm nav-link " data-bs-toggle="pill"
+                                        id="pill_pagamento_pix" data-bs-target="#pagamento_pix_container" type="button"
+                                        role="tab" aria-controls="pagamento_pix_container" aria-selected="false"
+                                        autocomplete="off" tabindex="-1">
+                                        <i class="bi bi-basket-fill"></i><br>Pagar com PIX
+                                        <input type="radio" class="pagamento_tipo" name="pagamento_tipo"
+                                            value="pagamento_pix">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div id="pagamento_credito_container" role="tabpanel" class="tab-pane fade active show"
+                                    aria-labelledby="pill_pagamento_credito">
+                                    <div class="card form_container">
+                                        <h5>Cartão de Crédito</h5>
+
+                                        <div class="form_content">
+                                            <hr>
+                                            <div id="form_cartao_credito" class="p-2">
+                                                <div class="ocultar_caso_token row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="cardNumber">Número do cartão</label>
+                                                            <input type="text" class="form-control form_payment"
+                                                                id="cardNumber" name="cardNumber" autocomplete="off"
+                                                                required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="ocultar_caso_token row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="holder">Nome impresso no cartão</label>
+                                                            <input type="text" class="form-control form_payment"
+                                                                id="holder" name="holder" autocomplete="off"
+                                                                required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="ocultar_caso_token col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="expirationMonth">Mês:</label>
+                                                            <select class="form-select form_payment"
+                                                                id="expirationMonth" name="expirationMonth" required="">
+                                                                <option disabled="" value="" selected="">Selecione
+                                                                </option>
+                                                                <option value="01">01</option>
+                                                                <option value="02">02</option>
+                                                                <option value="03">03</option>
+                                                                <option value="04">04</option>
+                                                                <option value="05">05</option>
+                                                                <option value="06">06</option>
+                                                                <option value="07">07</option>
+                                                                <option value="08">08</option>
+                                                                <option value="09">09</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ocultar_caso_token col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="expirationYear">Ano:</label>
+                                                            <select class="form-select form_payment" id="expirationYear"
+                                                                name="expirationYear" required="">
+                                                                <option disabled="" value="" selected="">Selecione
+                                                                </option>
+
+                                                                <option value="2024">2024</option>
+                                                                <option value="2025">2025</option>
+                                                                <option value="2026">2026</option>
+                                                                <option value="2027">2027</option>
+                                                                <option value="2028">2028</option>
+                                                                <option value="2029">2029</option>
+                                                                <option value="2030">2030</option>
+                                                                <option value="2031">2031</option>
+                                                                <option value="2032">2032</option>
+                                                                <option value="2033">2033</option>
+                                                                <option value="2034">2034</option>
+                                                                <option value="2035">2035</option>
+                                                                <option value="2036">2036</option>
+                                                                <option value="2037">2037</option>
+                                                                <option value="2038">2038</option>
+                                                                <option value="2039">2039</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="securityCode">CVV</label>
+                                                            <input maxlength="3" type="text"
+                                                                class="form-control form_payment" id="securityCode"
+                                                                name="securityCode" autocomplete="off" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="ocultar_caso_token col-md-12 pt-3 pl-3">
+                                                        <div class="form-group">
+                                                            <input id="salvar_cartao" class="form-check-input"
+                                                                type="checkbox" value="1" name="salvar_cartao"
+                                                                checked="">
+                                                            <label for="salvar_cartao" class="form-check-label">Salvar
+                                                                dados do cartão para compras
+                                                                futuras.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-100 text-center">
+                                            <button type="button" class="btn btn-success w-100 mt-3 mb-3">Finalizar
+                                                Pedido</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-12">
+                            <div id="container_resumo">
+                                <div class="card form_container">
+                                    <div class="container">
+                                        <h5>Resumo Final</h5>
+                                        <ul class="list-group mt-3">
+
+                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                                                Produtos:
+                                            </li>
+
+                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                                                <span>1x Calça Jeans</span>
+                                                <span>R$&nbsp;20,00</span>
+                                            </li>
+
+                                            <br>
+
+                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                                                Entrega:
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center border-bottom">
+                                                <span>Retirar no local.</span>
+                                            </li>
+
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span id="forma_pagamento"></span>
+                                                <span id="forma_pagamento_detalhes"></span>
+                                            </li>
+
+                                            <br>
+
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <h5>Total</h5>
+                                                <span>R$ 20,00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-100 text-center pt-3 pb-3">
+                                <a href="./endereco.html">Voltar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer id="app-footer" class="footer-transparent p-4">
+            <div class="container text-center">
+                <p class="m-0">Loja de Roupas - CNPJ: 45.814.425/0001-72</p>
+                <p class="m-0">Rua Ulbra, 68, São José, CEP: 04552040 - Canoas - RS</p>
+                <p class="m-0">(51) 99788-3481</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
